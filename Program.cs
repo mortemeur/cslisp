@@ -81,7 +81,7 @@ namespace cslisp
                 var thisForm = result.Substring(0, next - 1);
                 var nextForm = result.Substring(next);
                 int toReturn = 0;
-                object nextEvaluated = Parse(nextForm); //cannot implicitly converty type 'object' to 'int' An explicit conversion exists (are you missing a cast?)
+                object nextEvaluated = Parse(nextForm);
                 if (nextEvaluated is int)
                 {
                     toReturn = Eval(thisForm.Split(" ")) + (int)nextEvaluated;
